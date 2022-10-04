@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5a44f94317.js" crossorigin="anonymous"></script>
+
+  <style>
+
+i {
+    color: red;
+    font-size: xx-large;
+    margin: 40px;
+}
+
+  </style>
+  </head>
+  <body>
+    
+     <!-- örnek 1: -->
+    <i class="fa-solid fa-microphone" id="btn1" onclick="onay1();"></i>
+  
+    <i class="fa-solid fa-camera" id="btn2" onclick="onay2();"></i>
+    
+ 
+    <script>
+
+    //  örnek : 1
+      function onay1() {
+        let result1 = confirm("Bu sitede mikrofon açılsın mı?");
+        if(result1==true) {
+            document.getElementById('btn1').style.color="green";
+        }
+        else{
+            document.getElementById('btn1').style.color="gray";
+        }
+      }
+
+      function onay2() {
+        let result2 = confirm("Bu sitede camera açılsın mı?");
+        if(result2==true){
+            document.getElementById('btn2').className="fa-duotone fa-camera-rotate";
+            document.getElementById('btn2').style.color="green";
+        }
+        else {
+            document.getElementById('btn2').style.color="gray";
+        }
+      }
+
+</script>
+  </body>
+</html>
+
